@@ -1,4 +1,12 @@
 package modelo;
 
-public class ApuestaImpar {
+public class ApuestaImpar extends ApuestaBase {
+    public ApuestaImpar(double monto) {
+        super(monto, "Impar");
+    }
+
+    @Override
+    public boolean acierta(int numero, String color) {
+        return numero != 0 && numero % 2 != 0;
+    }
 }
